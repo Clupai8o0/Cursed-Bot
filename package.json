@@ -1,0 +1,36 @@
+{
+	"name": "cursed-bot",
+	"version": "0.1.0",
+	"description": "An rpg bot that uses the discord api",
+	"main": "index.js",
+	"scripts": {
+		"build": "npx tsc",
+		"start": "node dist/index.js",
+		"dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/index.js\"",
+		"deploy": "nodemon src/deploy-commands.js"
+	},
+	"keywords": [
+		"cursed",
+		"bot",
+		"discord",
+		"discord-js"
+	],
+	"author": "Clupai8o0",
+	"license": "ISC",
+	"devDependencies": {
+		"@types/node": "^17.0.23",
+		"concurrently": "^7.0.0",
+		"env-cmd": "^10.1.0",
+		"nodemon": "^2.0.15",
+		"typescript": "^4.6.3"
+	},
+	"dependencies": {
+		"@discordjs/builders": "^0.12.0",
+		"@discordjs/rest": "^0.3.0",
+		"colors": "^1.4.0",
+		"discord-api-types": "^0.30.0",
+		"discord.js": "^13.6.0",
+		"mongodb": "^4.4.1",
+		"wokcommands": "^1.5.3"
+	}
+}
