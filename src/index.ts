@@ -1,7 +1,8 @@
 import fs from "fs";
+import colors from "colors";
 
-//* Discord.js imports
 import { Client, Intents } from "discord.js";
+import { connectToServer } from "./db/mongodb";
 
 //* Connecting
 const client = new Client({
@@ -35,6 +36,14 @@ for (const file of eventFiles) {
 }
 // --------------------------------------------------
 
+//? Connecting
+//* Connecting to DB
+connectToServer(function (err: any) {
+	if (err) {
+		console.error(colors.red(err));
+		process.exit();
+	}
+});
 
-//? Connecting to the Discord API
+//* Connecting to the Discord API
 client.login(process.env.DISCORD_TOKEN);

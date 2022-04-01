@@ -4,8 +4,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const fs_1 = __importDefault(require("fs"));
-//* Discord.js imports
+const colors_1 = __importDefault(require("colors"));
 const discord_js_1 = require("discord.js");
+const mongodb_1 = require("./db/mongodb");
 //* Connecting
 const client = new discord_js_1.Client({
     intents: [
@@ -33,5 +34,13 @@ for (const file of eventFiles) {
     client.on(event.name, (...args) => event.execute(...args));
 }
 // --------------------------------------------------
-//? Connecting to the Discord API
+//? Connecting
+//* Connecting to DB
+(0, mongodb_1.connectToServer)(function (err) {
+    if (err) {
+        console.error(colors_1.default.red(err));
+        process.exit();
+    }
+});
+//* Connecting to the Discord API
 client.login(process.env.DISCORD_TOKEN);
