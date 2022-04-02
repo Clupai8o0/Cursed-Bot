@@ -13,7 +13,7 @@ module.exports = {
         //* Initializing Wok
         new wokcommands_1.default(client, {
             commandsDir: path_1.default.join(__dirname, "../commands"),
-            featuresDir: path_1.default.join(__dirname, "../features"),
+            // featuresDir: path.join(__dirname, "../features"),
             showWarns: true,
             botOwners: "774310307043737674",
             mongoUri: process.env.MONGODB_URL,
@@ -26,6 +26,10 @@ module.exports = {
                 name: "Help",
                 emoji: "😅",
             },
+            {
+                name: "Player",
+                emoji: "👤",
+            }
         ]);
         console.log(colors_1.default.blue("✅ Cursed Bot is ready!"));
     },

@@ -1,0 +1,52 @@
+{
+	"id": 0,
+	"user": {
+		"name": "",
+		"gender": "",
+		"description": "",
+		"title": "",
+		"state": {
+			"action": "idle",
+			"info": null,
+			"location": null
+		},
+		"special": null,
+    "titles": null
+	},
+	"relation": {
+		"guild": null,
+		"friends": [],
+		"party": null,
+		"relationship": null,
+	},
+	"status": {
+		"xp": 0,
+		"class": null,
+		"subClasses": null,
+		"element": null,
+		"spirit": null,
+		"money": 10,
+		"skills": null,
+
+		"stats": {
+			"strength": 0,
+			"dexterity": 0,
+			"constitution": 0,
+			"intelligence": 0,
+			"wisdom": 0,
+			"charisma": 0
+		}
+	},
+	"inventory": {
+		"items": [],
+		"equipment": {
+			"head": null,
+			"body": null,
+			"hands": null,
+			"legs": null,
+			"feet": null,
+			"weapon": null,
+			"shield": null
+		}
+	}
+}
