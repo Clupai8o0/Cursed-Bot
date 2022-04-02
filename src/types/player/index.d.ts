@@ -6,6 +6,7 @@ import Inventory from './inventory.player';
 /**
  * A player object containing all needed information requiring a user
  *
+ * ## Fields
  * @id {number} - The user's discord_id
  * @user {User} - Details about the user
  * @relation {Relation} - Relations of the user with the cursed world

@@ -29,6 +29,10 @@ module.exports = {
             {
                 name: "Player",
                 emoji: "👤",
+            },
+            {
+                name: 'Testing',
+                emoji: "🧪"
             }
         ]);
         console.log(colors_1.default.blue("✅ Cursed Bot is ready!"));

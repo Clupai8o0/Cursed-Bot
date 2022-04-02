@@ -1,31 +1,39 @@
 {
 	"id": 0,
+
 	"user": {
 		"name": "",
 		"gender": "",
 		"description": "",
-		"title": "",
+		"title": null,
 		"state": {
 			"action": "idle",
 			"info": null,
-			"location": null
+			"location": {
+				"name": "New World",
+				"x": 0,
+				"y": 0
+			}
 		},
 		"special": null,
     "titles": null
 	},
+
 	"relation": {
 		"guild": null,
-		"friends": [],
+		"friends": null,
 		"party": null,
 		"relationship": null,
 	},
+
 	"status": {
 		"xp": 0,
+		"money": 10,
+
 		"class": null,
 		"subClasses": null,
 		"element": null,
 		"spirit": null,
-		"money": 10,
 		"skills": null,
 
 		"stats": {
@@ -34,19 +42,32 @@
 			"constitution": 0,
 			"intelligence": 0,
 			"wisdom": 0,
-			"charisma": 0
+			"charisma": 0,
+
+			"hiddenStats": {
+				"luck": 0,
+				"rawPower": 0
+			}
 		}
 	},
+	
 	"inventory": {
 		"items": [],
+
 		"equipment": {
 			"head": null,
 			"body": null,
-			"hands": null,
 			"legs": null,
-			"feet": null,
-			"weapon": null,
-			"shield": null
+
+			"hands": {
+				"leftHand": null,
+				"rightHand": null
+			},
+			"feet": {
+				"leftFoot": null,
+				"rightFoot": null
+			},
+			}
 		}
 	}
 }

@@ -19,19 +19,32 @@ interface Stats {
 	};
 }
 
+/**
+ * Status of the player
+ * 
+ * ## Numberable Attributes
+ * @xp {number} - The player's current experience, converted into their level
+ * @money {money} - Money at hand
+ * 
+ * ## Non-Numberable Attributes
+ * @class {PlayerClass} - The player's class
+ * @subClasses {PlayerSubClass[]} - The player's subclasses
+ * @element {PlayerElement} - The player's element
+ * @spirit {Spirit} - The player's spirit
+ * @skills {Skill[]} - The player's skills
+ * 
+ * ## Basic Stats
+ * @stats {Stats} - The player's stats
+ */
 export default interface Status {
-	//* Their level
 	xp: number;
-	//* The money in hand
 	money: number;
 
-	//* Player specific attributes
 	class: PlayerClass | null;
 	subClasses: [PlayerSubClass] | null;
 	element: PlayerElement | null;
 	spirit: Spirit | null;
 	skills: [Skill] | null;
 
-	//* Player's stats
 	stats: Stats;
 }

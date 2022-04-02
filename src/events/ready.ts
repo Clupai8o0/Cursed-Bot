@@ -28,6 +28,10 @@ export = {
 				{
 					name: "Player",
 					emoji: "👤",
+				},
+				{
+					name: 'Testing',
+					emoji: "🧪"
 				}
 			]);
 
