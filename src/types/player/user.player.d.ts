@@ -33,7 +33,7 @@ interface Title {}
  * @location {PlayerLocation} - Where in the map is the user
  */
 interface State {
-	action: Action;
+	action: Action | string;
 	info: Info | null;
 	location: PlayerLocation;
 }
@@ -54,7 +54,7 @@ interface State {
  */
 export default interface User {
 	name: string;
-	gender: boolean;
+	gender: boolean | null;
 	description: string;
 	title: Title | [Title] | null;
 

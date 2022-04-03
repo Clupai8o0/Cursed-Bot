@@ -5,7 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 const colors_1 = __importDefault(require("colors"));
 const wokcommands_1 = __importDefault(require("wokcommands"));
 const path_1 = __importDefault(require("path"));
-const { prefix } = require("../../config/config.json");
+const { prefix } = require("../config/config.json");
 module.exports = {
     name: "ready",
     once: true,

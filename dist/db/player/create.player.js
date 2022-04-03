@@ -12,16 +12,17 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.createPlayer = void 0;
 const mongodb_1 = require("../mongodb");
 const response_1 = __importDefault(require("../../utils/response"));
-const createPlayer = () => __awaiter(void 0, void 0, void 0, function* () {
+const createPlayer = (player) => __awaiter(void 0, void 0, void 0, function* () {
     const db = (0, mongodb_1.getDb)();
     try {
+        const resp = yield db.collection("players").insertOne(player);
+        return (0, response_1.default)(true, "Player created successfully", resp);
     }
     catch (err) {
         console.error(err);
         return (0, response_1.default)(false, "Error creating player", err.message);
     }
 });
-exports.createPlayer = createPlayer;
+exports.default = createPlayer;

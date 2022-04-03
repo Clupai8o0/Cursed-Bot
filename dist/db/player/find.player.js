@@ -34,7 +34,7 @@ exports.findPlayer = findPlayer;
 const findPlayerByName = (name) => __awaiter(void 0, void 0, void 0, function* () {
     if (!name)
         return;
-    return yield findOne({ name: name.toLowerCase() });
+    return yield findOne({ name });
 });
 exports.findPlayerByName = findPlayerByName;
 /**

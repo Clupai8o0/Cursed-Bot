@@ -3,7 +3,7 @@ import { Client } from "discord.js";
 import WOKCommands from "wokcommands";
 import path from "path";
 
-const { prefix } = require("../../config/config.json");
+const { prefix } = require("../config/config.json");
 
 export = {
 	name: "ready",

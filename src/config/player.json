@@ -3,9 +3,10 @@
 
 	"user": {
 		"name": "",
-		"gender": "",
+		"gender": null,
 		"description": "",
 		"title": null,
+		
 		"state": {
 			"action": "idle",
 			"info": null,
@@ -16,14 +17,14 @@
 			}
 		},
 		"special": null,
-    "titles": null
+		"titles": null
 	},
 
 	"relation": {
 		"guild": null,
 		"friends": null,
 		"party": null,
-		"relationship": null,
+		"relationship": null
 	},
 
 	"status": {
@@ -46,11 +47,12 @@
 
 			"hiddenStats": {
 				"luck": 0,
-				"rawPower": 0
+				"rawPower": 0,
+				"endurance": 0
 			}
 		}
 	},
-	
+
 	"inventory": {
 		"items": [],
 
@@ -66,7 +68,6 @@
 			"feet": {
 				"leftFoot": null,
 				"rightFoot": null
-			},
 			}
 		}
 	}

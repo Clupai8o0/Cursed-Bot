@@ -13,8 +13,8 @@ import Inventory from './inventory.player';
  * @status {Status} - The player's status
  * @inventory {Inventory} - The player's inventory
  */
-interface Player {
-	id: number;
+export default interface Player {
+	id: number | string;
 	user: User;
 	relation: Relation;
 	status: Status

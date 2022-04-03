@@ -7,7 +7,7 @@ interface Equipment {
 
 export default interface Inventory {
 	//* The items in the player's inventory
-	items: [Item];
+	items: [Item] | never[] | null;
 
 	//* Player's equipments
 	equipment: {

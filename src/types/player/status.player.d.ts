@@ -15,6 +15,7 @@ interface Stats {
 	hiddenStats: {
 		luck: number;
 		rawPower: number;
+		endurance: number;
 		// TODO: Awaiting extension
 	};
 }

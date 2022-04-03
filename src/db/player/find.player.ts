@@ -1,7 +1,7 @@
 import { getDb } from "../mongodb";
 import resp from "../../utils/response";
 
-import { Player } from "../../types/player";
+import Player from "../../types/player";
 
 /**
  * Using the id provided, find the player in the database.
@@ -20,7 +20,7 @@ export const findPlayer = async (id?: number | string) => {
  */
 export const findPlayerByName = async (name: string) => {
 	if (!name) return;
-	return await findOne({ name: name.toLowerCase() });
+	return await findOne({ name });
 };
 
 /**
