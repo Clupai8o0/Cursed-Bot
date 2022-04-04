@@ -1,5 +1,5 @@
 import { getDb } from "../mongodb";
-import resp from "../../utils/response";
+import resp from "../../lib/response";
 
 import Player from "../../types/player";
 
@@ -31,7 +31,7 @@ export const findPlayerByName = async (name: string) => {
 const findOne = async (query: any) => {
 	const db = getDb();
 	try {
-		const data: Player | null = await db.collection("players").findOne(query);
+		const data: Player | any = await db.collection("players").findOne(query);
 		return data
 			? resp(true, "Player found", data)
 			: resp(true, "Player not found", data);

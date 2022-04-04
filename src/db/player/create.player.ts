@@ -1,5 +1,5 @@
 import { getDb } from "../mongodb";
-import response from "../../utils/response";
+import response from "../../lib/response";
 
 import Player from "../../types/player";
 

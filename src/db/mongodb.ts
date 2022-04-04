@@ -1,11 +1,11 @@
 //* Imports
 import colors from "colors";
-import { MongoClient } from "mongodb";
+import { MongoClient, Db } from "mongodb";
 
 //* Constants
 const connectionUrl = process.env.MONGODB_URL || "",
 	databaseName = process.env.MONGODB_DATABASE_NAME;
-let dbConnection: any;
+let dbConnection: Db;
 
 //* Connecting
 const client = new MongoClient(connectionUrl);

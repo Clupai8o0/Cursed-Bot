@@ -14,15 +14,15 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const mongodb_1 = require("../mongodb");
 const response_1 = __importDefault(require("../../lib/response"));
-const createPlayer = (player) => __awaiter(void 0, void 0, void 0, function* () {
+const updatePlayer = (id, query) => __awaiter(void 0, void 0, void 0, function* () {
     const db = (0, mongodb_1.getDb)();
     try {
-        const resp = yield db.collection("players").insertOne(player);
-        return (0, response_1.default)(true, "Player created successfully", resp);
+        const resp = yield db.collection("players").findOneAndUpdate({ id }, Object.assign({}, query));
+        return (0, response_1.default)(true, "Player updated successfully", resp);
     }
     catch (err) {
         console.error(err);
-        return (0, response_1.default)(false, "Error creating player", err.message);
+        return (0, response_1.default)(false, "Error updating player", err.message);
     }
 });
-exports.default = createPlayer;
+exports.default = updatePlayer;

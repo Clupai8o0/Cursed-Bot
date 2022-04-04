@@ -14,7 +14,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.findPlayerByName = exports.findPlayer = void 0;
 const mongodb_1 = require("../mongodb");
-const response_1 = __importDefault(require("../../utils/response"));
+const response_1 = __importDefault(require("../../lib/response"));
 /**
  * Using the id provided, find the player in the database.
  * @param id {number | string} Discord user id
